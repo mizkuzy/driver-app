@@ -1,0 +1,102 @@
+.header {
+    margin-bottom: 40px;
+}
+
+.colored-yellow {
+    background-color: yellow;
+    position: relative;
+}
+
+.colored-purple {
+    background-color: purple;
+    position: relative;
+}
+
+.colored-green {
+    background-color: green;
+    position: relative;
+}
+
+.colored-blue {
+    background-color: blue;
+    position: relative;
+}
+
+.background-set {
+
+    min-height: 100%;
+    min-width: 1024px;
+
+    width: 100%;
+    height: auto;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    /* Определяется свое для каждого конкретного изображения */
+    .background-set {
+        left: 50%;
+        margin-left: -512px; /* 50% */
+    }
+}
+
+.my-settings {
+    position: absolute;
+}
+
+td {
+    background: #333; /* Цвет фона */
+    color: #fc0;
+    border: 1px solid #333; /* Граница вокруг ячеек */
+    padding: 5px; /* Поля в ячейках */
+    opacity: 0.5; /* Полупрозрачность таблицы */
+    filter: alpha(Opacity=50); /* Для IE */
+}
+
+th {
+    background: #333; /* Цвет фона */
+    color: #fc0;
+    border: 1px solid #333; /* Граница вокруг ячеек */
+    padding: 5px; /* Поля в ячейках */
+    opacity: 0.5; /* Полупрозрачность таблицы */
+    filter: alpha(Opacity=50); /* Для IE */
+}
+
+.td-sp {
+    background: #333; /* Цвет фона */
+    color: orangered;
+    border: 1px solid #333; /* Граница вокруг ячеек */
+    padding: 5px; /* Поля в ячейках */
+    opacity: 0.9; /* Полупрозрачность таблицы */
+    filter: alpha(Opacity=50); /* Для IE */
+}
+
+caption {
+    caption-side: top;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 25px;
+    font-weight: bold;
+    color: grey;
+}
+
+.new-btn {
+    position: absolute;
+}
+
+.tb-driver {
+    margin-top: 40px;
+    margin-right: 80px;
+}
+
+.msg {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}

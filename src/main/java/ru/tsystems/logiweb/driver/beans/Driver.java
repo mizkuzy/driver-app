@@ -69,8 +69,14 @@ public class Driver {
         }
     }
 
+    /**
+     * Sends to main app that this driver finished the order.
+     */
     public void finishOrder() {
-        //todo посылаем на сервер сообщение, что мы завершили заказ
+        String username = SessionBean.getUserName();
+        String urlStr = "http://localhost:9080/rest/hello/finish_order/" + username;
+
+        getConnection(urlStr);
     }
 
 }

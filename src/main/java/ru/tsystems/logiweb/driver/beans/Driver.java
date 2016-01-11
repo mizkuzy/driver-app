@@ -36,18 +36,18 @@ public class Driver {
 
     }
 
+    /**
+     * Gets connection to required url and prints result and response.
+     *
+     * @param urlStr
+     */
     private void getConnection(String urlStr) {
         try {
-            /*String username = SessionBean.getUserName();
-            String urlStr = "http://localhost:9080/rest/hello/begin/" + username;*/
             URL url = new URL(urlStr);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             System.out.println("sending request...");
 
             conn.setRequestMethod("GET");
-            //conn.setRequestProperty("Content-type", "text/xml");
-            //conn.setRequestProperty("Accept", "text/xml");
-            //conn.setRequestProperty("Accept", "application/json");
             System.out.println(conn.getRequestProperties());
 
             int responseCode = conn.getResponseCode();

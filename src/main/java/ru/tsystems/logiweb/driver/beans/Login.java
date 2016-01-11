@@ -46,8 +46,6 @@ public class Login implements Serializable {
         this.user = user;
     }
 
-	/*Mini web application. EJB3, JSF, Client to Jersey Service*/
-
     /**
      * Validates username and password.
      *
@@ -69,6 +67,13 @@ public class Login implements Serializable {
         }
     }
 
+    /**
+     * Gets connection to required url and prints result and response.
+     *
+     * @param username
+     * @param password
+     * @return true or false
+     */
     private boolean getValidation(String username, String password) {
         try {
             String urlStr = "http://localhost:9080/rest/hello/validate/" + username + "/" + password + "/";
@@ -78,9 +83,6 @@ public class Login implements Serializable {
             System.out.println("sending request...");
 
             conn.setRequestMethod("GET");
-            //conn.setRequestProperty("Content-type", "text/xml");
-            //conn.setRequestProperty("Accept", "text/xml");
-            //conn.setRequestProperty("Accept", "application/json");
             System.out.println(conn.getRequestProperties());
 
             int responseCode = conn.getResponseCode();
